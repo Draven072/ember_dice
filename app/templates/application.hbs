@@ -1,5 +1,30 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<!-- Inside the Head section -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 
-{{outlet}}
+<!-- Inside the Body section -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<!--
+<h1>Hello!!!</h1>
+<p>This is Ember JS!</p>
+-->
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+            <i class="material-icons">filter_6</i>
+            Dice Roller
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {{#link-to 'roll' tagName="li"}}
+            <a href="roll">Roll Dice</a>
+            {{/link-to}}
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    {{outlet}}
+</div>
