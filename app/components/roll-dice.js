@@ -7,7 +7,7 @@ export default Component.extend({
 
     actions: {
       triggerRoll() {
-        alert(`Rolling ${this.numberOfDice}D${this.numberOfSides} as "${this.rollName}"`);
+        this.sendAction('roll', this.rollName, this.numberOfDice, this.numberOfSides);
         return false;
       }
     },
